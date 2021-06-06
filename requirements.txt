@@ -1,0 +1,7 @@
+numpy==1.20.3
+streamlit==0.82.0
+opencv-python==4.5.2.52
+Pillow==8.2.0
+google-cloud-vision==2.3.1
+bokeh
+streamlit_bokeh_events
