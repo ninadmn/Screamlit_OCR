@@ -84,8 +84,5 @@ if __name__ == '__main__':
             filtered_output = parse_vin(out_texts)
             st.write(filtered_output[0])
 
-            button = Button(label="Copy to Clipboard", height=40, align='end')
-            button.js_on_event("button_click", CustomJS(args=dict(df=str(filtered_output[0])),
-                                                        code="""navigator.clipboard.writeText(df);"""))
-            no_event = streamlit_bokeh_events(button, events="GET_TEXT", key="get_text", refresh_on_update=True,
-                                              override_height=button.height + 10, debounce_time=0)
+            for out in filtered_output:
+           	 st.write({'chassis_no': out})
